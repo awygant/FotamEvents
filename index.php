@@ -12,19 +12,16 @@
 </head>
 <body>
 
-<!-- TODO: Make a click on .infoBoxWrapper close .infoBoxWrapper -->
-<div class = "infoBoxWrapper">
+<!--div class = "infoBoxWrapper">
     <div class = "ghost infoBox vertical-center" style = "pointer-events:none">
         <div class = "fotamInfoHeader"></div>
         <p>To upload a photo, you must first login with your Fotam account.</p>
         <div class = "row">
-            <!-- TODO: Link to login -->
             <div class = "col-xs-12 col-sm-6"><p><button class = "ghost miniGhost">Login</button></p></div>
-            <!-- TODO: Make this cancel button close .infoBoxWrapper -->
             <div class = "col-xs-12 col-sm-6"><button class = "warning ghost miniGhost">Cancel</button></div>
         </div>
     </div>
-</div>
+</div-->
 
 <!-- TODO: make the background image for this class dynamic. -->
 <div class = "mainBackground" style = 'background-image:url("img/elements/white-40.png"), url("img/examples/imageOne.jpg");'></div>
@@ -33,9 +30,15 @@
 <div id = "container">
 
 
-    <div class="headerTextWrapper">
-        <!-- TODO: Grab text from db and use it for this title -->
+    <!--div class="headerTextWrapper">
         <h1 class = "headerText text-center vertical-center">Elk Appreciation Party</h1>
+    </div-->
+
+    <div class="headerTextWrapper">
+        <div class = "blurryHeaderWrapper"></div>
+        <!-- TODO: Make this pull the event's featured image -->
+        <div class = "blurryHeader" style = "background-image:url('img/examples/imageOne.jpg');"></div>
+        <h1 class = "headerText">Elk Appreciation Party</h1>
     </div>
 
 
