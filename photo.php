@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- TODO: make the background image for this class dynamic. On this page, it should match the img from .mainPhoto -->
-<div class = "mainBackground" style = 'background-image:url("img/elements/white-40.png"), url("img/examples/imageOne.jpg");'></div>
+<div class = "mainBackground" style = 'background-image:url("img/elements/white-40.png"), url("http://events.fotam.com/img/featured/1");'></div>
 <?php include_once("includes/nav.php");?>
 
 <div id = "container">
@@ -20,7 +20,7 @@
         <div class="headerTextWrapper">
             <div class = "blurryHeaderWrapper"></div>
             <!-- TODO: Make this pull the event's featured image -->
-            <div class = "blurryHeader" style = "background-image:url('http://events.fotam.com/img/featured/1');"></div>
+            <div class = "blurryHeader" style = "background-image:url('img/examples/imageOne.jpg');"></div>
             <h1 class = "headerText">Elk Appreciation Party</h1>
         </div>
 
@@ -108,7 +108,7 @@
         <div class = "row miniPadding">
             <div class = "col-md-9 col-xs-12 col-md-push-3 text-left">
                 <div class = "mainPhoto">
-                    <img src = "img/examples/imageOne.jpg"/>
+                    <img src = "http://events.fotam.com/img/featured/1"/>
                 </div>
             </div>
             <div class = "col-md-3 col-xs-12 col-md-pull-9 text-left">
