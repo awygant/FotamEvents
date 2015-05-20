@@ -70,6 +70,7 @@ body{
     opacity:0.3;
 }
 
+
 #menuButton{
     width:50px;
     height:50px;
@@ -96,7 +97,6 @@ body{
     filter: none;
     -webkit-filter: none;
 
-    /* TODO: add prefixes to all transform properties */
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -756,8 +756,10 @@ ul.searchResults>li{
 
 .photoMeta, .descriptionBox{
     background-color:rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 1px #555;
     padding:15px;
+    border:1px solid rgba(30,30,30,0.2);
+    border-top-color:rgba(255,255,255,0.2);
+    border-bottom-color:rgba(30,30,30,0.3);
 }
 
 @media(max-width:992px){
@@ -774,9 +776,7 @@ ul.searchResults>li{
 .descriptionBox{
     color: #28221f;
     text-align:center;
-    /*border: 4px solid #28221f;
-    padding:20px;*/
-    margin:5px auto;
+    margin:2px auto;
 }
 
 /** Add these classes **/
@@ -817,8 +817,38 @@ ul.searchResults>li{
     padding-right:30px;
 }
 
+ul.dropdownContainer{
+    margin-bottom:2px;
+    text-align:left;
+    list-style-type:none;
+    padding-left:0;
+}
+
+ul.dropdownContainer>li{
+    display:inline-block;
+    position:relative;
+}
+
+ul.ghostSubMenu{
+    list-style-type:none;
+    display:none;
+    padding:0;
+    position:absolute;
+    z-index:1;
+    width:100%;
+}
+
+ul.ghostSubMenu>li{
+    padding:15px;
+    font-family:'Amaranth', sans-serif;
+    text-transform:uppercase;
+    color:#999;
+    background-color:#28221f;
+    cursor:pointer;
+}
+
 .typeA, .typeB, .typeC{
-    padding:0 0 3px 0;
+    padding:0 0 1px 0;
     text-align:left;
     font-size:0;
 }
@@ -830,8 +860,8 @@ ul.searchResults>li{
 .typeA img{
     display:inline-block;
     font-size:0;
-    width:31.3%;
-    margin: 0 2% 2% 0;
+    width:32.3%;
+    margin: 0 1% 1% 0;
 }
 
 .typeA img:last-of-type{
@@ -840,14 +870,14 @@ ul.searchResults>li{
 
 .typeB div{
     display:inline-block;
-    width: 33.5%;
+    width: 33%;
     text-align:right;
     vertical-align: top;
-    padding-left:2%;
+    padding-left:1%;
 }
 
 .typeB div:first-of-type{
-    width:64.5%;
+    width:65.5%;
     padding-left:0;
 }
 
@@ -857,22 +887,115 @@ ul.searchResults>li{
     margin-bottom:5%;
 }
 
+.typeB div:first-of-type>img{
+    margin-bottom:0;
+}
+
 
 .typeC div{
     display:inline-block;
-    width:64.5%;
+    width:65.5%;
     text-align:right;
     vertical-align: top;
 
 }
 
 .typeC div:first-of-type{
-    width:33.5%;
-    padding-right:2%;
+    width:33%;
+    padding-right:1%;
 }
 
 .typeC div>img{
     width:100%;
     vertical-align: top;
+    margin-bottom:0;
+}
+
+.typeC div:first-of-type>img{
     margin-bottom:5%;
+}
+
+.fullScreenOverlay{
+    background:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:10;
+    overflow:scroll;
+}
+
+.fullScreenClose{
+    width:50px;
+    height:50px;
+    background-image:url("../img/icons/plus.png");
+    background-image:url("../img/icons/plus.svg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:2;
+    cursor:pointer;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fullScreenBlurry{
+    width:100%;
+    height:100%;
+    z-index:0;
+    position:absolute;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    filter: blur(4px);
+    -webkit-filter:blur(4px);
+    opacity:0.7;
+}
+
+.fullScreenBlurry.galleryLeft{
+    height:100%;
+    width:50%;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.fullScreenBlurry.galleryRight {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.galleryRight .blinkingArrow{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.fullScreenImg{
+    position:absolute;
+    text-align:center;
+    width:100%;
+    height:100%;
+    padding-top:80px;
+}
+
+.fullScreenImg img{
+    max-width:100%;
+    box-shadow:0 2px 1px #555;
+}
+
+.glassy{
+    background-color:rgba(255, 255, 255, 0.1);
+    border:1px solid rgba(30,30,30,0.2);
+    border-top-color:rgba(255,255,255,0.2);
+    border-bottom-color:rgba(30,30,30,0.3);
 }

@@ -11,3 +11,4 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<script src = "http://code.jquery.com/jquery-2.1.4.js"></script>
