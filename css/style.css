@@ -70,29 +70,6 @@ body{
     opacity:0.3;
 }
 
-
-#menuButton{
-    width:50px;
-    height:50px;
-    background-image:url("../img/icons/plus.png");
-    background-image:url("../img/icons/plus.svg");
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center center;
-    position:fixed;
-    top:15px;
-    right:15px;
-    z-index:2;
-    cursor:pointer;
-
-    filter: grayscale(1) brightness(1);
-    -webkit-filter: grayscale(1) brightness(1);
-
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s;
-    transition: all .5s;
-}
-
 #menuButton.expanded{
     filter: none;
     -webkit-filter: none;
@@ -101,13 +78,6 @@ body{
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
 
-}
-
-#blinkingArrowContainer{
-    position:fixed;
-    top:3px;
-    right:23px;
-    z-index:2;
 }
 
 .blinkingArrow{
@@ -165,30 +135,6 @@ body{
     transform: rotate(180deg);
 }
 
-#menu{
-    width:300px;
-    max-width:99%;
-    min-height:100%;
-    position:fixed;
-    top:0;
-    right:0;
-    z-index:1;
-    font-family: 'Roboto Condensed', sans-serif;
-    color:#28221f;
-    background-color:#eeeded;
-    background-repeat: no-repeat, repeat;
-    background-position: bottom center, top left;
-    background-size: 75% auto, auto;
-
-    margin-right:-300px;
-
-    padding:0 15px;
-
-    -webkit-transition: -webkit-transform 0.4s ease;
-    -moz-transition: -moz-transform 0.4s ease;
-    transition: transform 0.4s ease;
-    box-shadow: inset 10px 0 10px -5px #ccc;
-}
 
 #menuInnerWrap{
     position:absolute;
@@ -413,13 +359,6 @@ ul.searchResults>li{
     padding:0 5px;
 }
 
-.username{
-    text-transform:uppercase;
-    font-family:'Amaranth', sans-serif;
-    color:#28221f;
-    letter-spacing: 1px;
-}
-
 .socialStat{
     display:inline-block;
     background-position:15px center;
@@ -577,23 +516,6 @@ ul.searchResults>li{
     animation-name: reverseSpin,flash;
 }
 
-.fixedUploadButton{
-    position:fixed;
-    bottom:15px;
-    right:15px;
-    height:130px;
-    width:130px;
-    border-radius:65px;
-    border: 2px solid #28221f;
-    background-color:rgba(40, 33, 31, 0.85);
-    background-image:url("../img/icons/camera.png");
-    background-image:url("../img/icons/camera.svg");
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-size:70%;
-    cursor:pointer;
-}
-
 .infoBoxWrapper{
     position:fixed;
     z-index:4;
@@ -621,17 +543,6 @@ ul.searchResults>li{
     background-position: center, center, center;
     margin:-15px -15px 15px -15px;
     box-shadow:inset 0 -7px 6px -5px #1665c4;
-}
-
-@media(max-width:767px){
-    .fixedUploadButton{
-        right:auto;
-        left:50%;
-        height:80px;
-        width:80px;
-        border-radius:40px;
-        margin-left:-40px;
-    }
 }
 
 @-ms-keyframes spin {
@@ -754,13 +665,78 @@ ul.searchResults>li{
     z-index:1;
 }
 
+#menuButton{
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    background-image:url("../img/icons/plus.png");
+    /*** This file changed - make sure to grab the updated .svg **/
+    background-image:url("../img/icons/plus.svg");
+    background-size:auto 90%;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:fixed;
+    top:21px;
+    right:23px;
+    z-index:3;
+    cursor:pointer;
+
+    filter: grayscale(1) brightness(0.5);
+    -webkit-filter: grayscale(1) brightness(0.5);
+
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+#menu{
+    width:300px;
+    max-width:99%;
+    min-height:100%;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:2;
+    font-family: 'Roboto Condensed', sans-serif;
+    color:#28221f;
+    background-color:#eeeded;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom center, top left;
+    background-size: 75% auto, auto;
+
+    margin-right:-300px;
+
+    padding:0 15px;
+
+    -webkit-transition: -webkit-transform 0.4s ease;
+    -moz-transition: -moz-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-shadow: inset 10px 0 10px -5px #ccc;
+}
+
+#blinkingArrowContainer{
+    position:fixed;
+    top:3px;
+    right:23px;
+    z-index:3;
+}
+
 .photoMeta, .descriptionBox{
     background-color:rgba(255, 255, 255, 0.2);
     padding:15px;
     border:1px solid rgba(30,30,30,0.2);
     border-top-color:rgba(255,255,255,0.2);
     border-bottom-color:rgba(30,30,30,0.3);
-    pointer-events: all;
+}
+
+.username{
+    text-transform:uppercase;
+    font-family:'Amaranth', sans-serif;
+    color:#28221f;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 @media(max-width:992px){
@@ -781,6 +757,39 @@ ul.searchResults>li{
 }
 
 /** Add these classes **/
+
+.ghost:active{
+    background-color:rgba(0,0,0,0.2);
+}
+
+
+.fixedUploadButton{
+    position:fixed;
+    right:75px;
+    top:21px;
+    width:138px;
+    z-index:2;
+
+    background-image:url("../img/icons/shutter.png");
+    background-image:url("../img/icons/shutter.svg");
+    background-size:auto 90%;
+    background-repeat:no-repeat;
+    background-position:right 5px center;
+
+    padding-left:22px;
+    line-height:40px;
+    height:40px;
+    font-size:10pt;
+    font-family:'Amaranth', sans-serif;
+    color:#211f1d;
+    text-transform: uppercase;
+    letter-spacing:1px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+}
+
 .blurryHeaderWrapper{
     width:100%;
     height:100%;
@@ -808,12 +817,11 @@ ul.searchResults>li{
     padding: 0 15px;
 }
 
-.row.noInternalPadding>div{
+.row.noInternalPadding>div, .row.noInternalPadding>li{
     padding:1px;
 }
 
 .ghostDropdown{
-    width:auto;
     background-image:url("../img/elements/carrot.png");
     background-image:url("../img/elements/carrot.svg");
     background-position: right 10px center;
@@ -822,6 +830,8 @@ ul.searchResults>li{
     padding-right:30px;
 }
 
+
+/* **/
 ul.dropdownContainer{
     margin-bottom:2px;
     text-align:left;
@@ -852,6 +862,14 @@ ul.ghostSubMenu>li{
     cursor:pointer;
 }
 
+ul.ghostSubMenu>li:hover{
+    background-color:#333;
+}
+
+ul.ghostSubMenu>li:active{
+    background-color:#555;
+}
+/***/
 
 .fullScreenOverlay{
     background:#fff;
@@ -866,8 +884,8 @@ ul.ghostSubMenu>li{
 }
 
 .fullScreenClose{
-    width:50px;
-    height:50px;
+    width:36px;
+    height:36px;
     background-image:url("../img/icons/plus.png");
     background-image:url("../img/icons/plus.svg");
     background-size:contain;
@@ -896,10 +914,6 @@ ul.ghostSubMenu>li{
     opacity:0.7;
 }
 
-.galleryLeft, .galleryRight{
-    pointer-events: all;
-}
-
 .fullScreenBlurry.galleryLeft{
     height:100%;
     width:50%;
@@ -924,12 +938,7 @@ ul.ghostSubMenu>li{
 
 
 .fullScreenImg{
-    position:absolute;
-    text-align:center;
-    width:100%;
-    height:100%;
     padding-top:80px;
-    pointer-events: none;
 }
 
 .fullScreenImg img{
@@ -967,7 +976,7 @@ ul.ghostSubMenu>li{
 .img-card{
     width:100%;
     height:100%;
-    background-color:rgba(255, 255, 255, 0.5);
+    /*background-color:rgba(255, 255, 255, 0.5);*/
     text-align:left;
     color:#666;
 }
@@ -976,8 +985,10 @@ ul.ghostSubMenu>li{
     position:absolute;
     bottom:78px;
     left:13px;
-    border-radius:25px;
+    border-radius:18px;
     box-shadow: 0 0 0 2px #fff;
+    width:36px;
+    height:36px;
 }
 
 .img-card-meta{
@@ -988,6 +999,17 @@ ul.ghostSubMenu>li{
     white-space: nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
+    border-top:1px solid #ddd;
+    box-shadow:0 2px 2px -1px #666;
+    margin-top:-64px;
+
+    background: -moz-linear-gradient(top,  rgba(238,238,238,0.65) 0%, rgba(238,238,238,0.78) 51%, rgba(238,238,238,0.9) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,0.65)), color-stop(51%,rgba(238,238,238,0.78)), color-stop(100%,rgba(238,238,238,0.9))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(238,238,238,0.65) 0%,rgba(238,238,238,0.78) 51%,rgba(238,238,238,0.9) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(238,238,238,0.65) 0%,rgba(238,238,238,0.78) 51%,rgba(238,238,238,0.9) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(238,238,238,0.65) 0%,rgba(238,238,238,0.78) 51%,rgba(238,238,238,0.9) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(238,238,238,0.65) 0%,rgba(238,238,238,0.78) 51%,rgba(238,238,238,0.9) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6eeeeee', endColorstr='#e6eeeeee',GradientType=0 ); /* IE6-9 */
 }
 
 .photoDescription{
@@ -1028,6 +1050,60 @@ ul.ghostSubMenu>li{
     border-bottom-color:rgba(30,30,30,0.3);
 }
 
+.blurry{
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.backgroundStyle{
+    position:absolute;
+    background-size:cover;
+    width:100%;
+    height:100%;
+}
+
+.mainPhoto .galleryLeft, .mainPhoto .galleryRight{
+    margin:-5px;
+    width:50px;
+    height:50px;
+    position:absolute;
+    background-repeat:no-repeat;
+    cursor: pointer;
+    opacity:0;
+    transition:opacity 0.5s;
+}
+
+.mainPhoto:hover>.galleryLeft, .mainPhoto:hover>.galleryRight{
+    opacity:1;
+}
+
+.mainPhoto .galleryRight{
+    right:0;
+
+}
+
+.leftArrow, .rightArrow{
+    background-image:url("../img/elements/carrot.png");
+    background-image:url("../img/elements/carrot.svg");
+    background-size:10px 10px;
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center center;
+    z-index:1;
+    background-color:rgba(255,255,255,0.55);
+}
+
+.leftArrow{
+    transform:rotate(90deg);
+}
+
+.rightArrow{
+    transform:rotate(-90deg);
+}
+
+
 @media(min-width:769px){
     .vertical-center{
         position: relative;
@@ -1046,5 +1122,23 @@ ul.ghostSubMenu>li{
     }
     .text-card{
         max-width:none;
+    }
+    .fixedUploadButton{
+        width:100%;
+        bottom:5px;
+        top:auto;
+        height:50px;
+        right:0;
+
+        background-position:5px center;
+        background-color:rgba(255,255,255,0.85);
+
+        font-size:16pt;
+        text-align:center;
+        line-height:52px;
+
+        border:1px solid rgba(100,100,100,0.2);
+        border-top-color:rgba(255,255,255,1);
+        border-bottom-color: rgba(100,100,100,0.4);
     }
 }

@@ -1,4 +1,6 @@
-<div id = "menuButton"></div>
+<!-- TODO: Make fixedUploadButton bring up the photo dialogue -->
+<div class = "fixedUploadButton glassy">UPLOAD</div>
+<div id = "menuButton" class = "glassy"></div>
 <div id = "blinkingArrowContainer">
     <div class = "blinkingArrow"></div>
     <div class = "blinkingArrow"></div>
