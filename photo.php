@@ -25,47 +25,48 @@
     </div>
 
 
-    <div id = "wrap" class = "container text-center">
-        <div class = "row miniPadding">
-            <div class = "col-md-9 col-xs-12 col-md-push-3 text-left">
-                <div class = "mainPhoto">
-                    <!-- TODO: Make galleryLeft go to the previous photo. Make it disappear if there are no previous gallery items. -->
-                    <div class = "galleryLeft glassy">
-                        <div class = "leftArrow"></div>
-                        <!-- TODO: Make this pull the previous gallery item, if there is one -->
-                        <div class = "backgroundStyle" style = "background-image:url('http://flashfotoapi.com/api/get/3400695?partner_username=facebook&partner_apikey=apikey4facebook&height=48&width=48')"></div>
-                    </div>
-                    <!-- TODO: Make galleryRight go to the next photo. Make it disappear if there are no further gallery items. -->
-                    <div class = "galleryRight glassy">
-                        <div class = "rightArrow"></div>
-                        <!-- TODO: Make this pull the next gallery item, if there is one -->
-                        <div class = "backgroundStyle" style = "background-image:url('http://flashfotoapi.com/api/get/3400747?partner_username=facebook&partner_apikey=apikey4facebook&height=48&width=48')"></div>
-                    </div>
-                    <img src = "http://events.fotam.com/img/featured/1"/>
-                </div>
+
+
+    <div id = "wrap">
+
+        <!-- TODO: If user came here from a gallery: include both fauxCards and implement swipe navigation (swipe left to right = go to previous, vice versa) -->
+        <!-- TODO: Make clicking this go to previous photo from the gallery. -->
+        <div class = "card fauxCard fauxCardPrevious glassy">
+            <div class = "descriptionBox">
+                <!-- TODO: Make this pull the previous gallery image. -->
+                <img class = "blurry" src = "http://flashfotoapi.com/api/get/3401921?partner_username=facebook&partner_apikey=apikey4facebook&resize=fit&height=200"/>
             </div>
-            <div class = "col-md-3 col-xs-12 col-md-pull-9 text-left">
-                <div class = "photoMeta">
-                    <div>
-                        <img class = "userProfilePic" src = "img/examples/imageTwo.jpg" alt = "Firstname Lastname" />
-                        <div class = "userInfoText">
-                            <p class = "username">DIDDLEYDOODLE</p>
-                            <p class= "photoMetaTimestamp">March 10, 2015 7:03 PM</p>
-                        </div>
-                    </div>
-                    <div class = "socialStat socialStatFB"><span class = "bold uppercase">102</span>Likes</div>
-                    <div class = "socialStat socialStatShare"><span class = "bold uppercase">3</span>Shares</div>
-                    <div class = "socialStat socialStatTW"><span class = "bold uppercase">44</span>Tweets</div>
-                    <button class = "ghost miniGhost">Share</button>
-                    <div class="arrow-up horiz-center"></div>
-                    <div class = "shareButtonDropDown">
-                        <button class = "shareButton fbShareButton bold uppercase">Facebook</button>
-                        <button class = "shareButton twShareButton bold uppercase">Twitter</button>
+
+        </div>
+
+        <div class = "card large-card glassy">
+            <img src = "http://events.fotam.com/img/featured/1"/>
+            <div class = "descriptionBox">
+                <div>
+                    <img class = "userProfilePic" src = "img/examples/archie.png" alt = "Firstname Lastname" />
+                    <div class = "userInfoText">
+                        <p class = "username">DIDDLEYDOODLE</p>
+                        <p class= "photoMetaTimestamp">March 10, 2015 7:03 PM</p>
                     </div>
                 </div>
+                <div class = "socialStat socialStatFB"><span class = "bold uppercase">102</span>Likes</div>
+                <div class = "socialStat socialStatShare"><span class = "bold uppercase">3</span>Shares</div>
+                <div class = "socialStat socialStatTW"><span class = "bold uppercase">44</span>Tweets</div>
+                <button class = "shareButton fbShareButton bold uppercase">Facebook Post</button>
+                <button class = "shareButton twShareButton bold uppercase">Tweet</button>
             </div>
         </div>
+
+        <!-- TODO: Make clicking this advance the gallery. -->
+        <div class = "card fauxCard fauxCardNext glassy">
+            <div class = "descriptionBox">
+                <!-- TODO: Make this pull the next gallery image. -->
+                <img class = "blurry" src = "http://flashfotoapi.com/api/get/3406732?partner_username=facebook&partner_apikey=apikey4facebook&resize=fit&height=200"/>
+            </div>
+        </div>
+
     </div>
+
 
 
 

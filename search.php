@@ -11,8 +11,9 @@
 <?php include_once("includes/nav.php");?>
 
 <div id = "container">
+
         <div class="headerTextWrapper">
-            <h1 class = "headerText text-center vertical-center">Find an Event</h1>
+            <h1 class = "headerText">Find an Event</h1>
         </div>
         <div id = "wrap" class = "container text-center">
             <div class = "row">

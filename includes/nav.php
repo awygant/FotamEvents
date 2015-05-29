@@ -1,4 +1,4 @@
-<!-- TODO: Make fixedUploadButton bring up the photo dialogue -->
+<!-- TODO: Make fixedUploadButton bring up the photo dialogue. Should only be present when user is checked in. -->
 <div class = "fixedUploadButton glassy">UPLOAD</div>
 <div id = "menuButton" class = "glassy"></div>
 <div id = "blinkingArrowContainer">
@@ -13,6 +13,7 @@
 
         <ul>
             <li><a href = "javascript;">Gallery</a></li>
+            <!-- TODO: Upload only present for checked in users. -->
             <li><a href = "javascript;">Upload</a></li>
             <li><a href = "search.php">Find an Event</a></li>
             <li><a href = "logout.php">Logout</a></li>

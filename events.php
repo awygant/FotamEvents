@@ -12,7 +12,7 @@
 
 <div id = "container">
     <div class="headerTextWrapper">
-        <h1 class = "headerText text-center vertical-center">Events Near Here</h1>
+        <h1 class = "headerText">Events Near Here</h1>
     </div>
     <div id = "wrap" class = "container">
         <ul class = "searchResults row">
