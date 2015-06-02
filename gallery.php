@@ -6,14 +6,14 @@
 <head lang="en">
     <meta charset="UTF-8">
     <!-- TODO: Make this dynamic and write a text resize script to ensure the title isn't too wide. -->
-    <title>Elk Appreciation Party</title>
+    <title>Palm Trees & Chickens</title>
     <?php include_once("includes/meta.php");?>
     <?php include_once("includes/resources.php"); ?>
 </head>
 <body>
 
 <!-- TODO: make the background image for this class dynamic. -->
-<div class = "mainBackground" style = 'background-image:url("img/elements/white-40.png"), url("img/examples/imageOne.jpg");'></div>
+<div class = "mainBackground" style = 'background-image:url("img/elements/white-40.png"), url("http://flashfotoapi.com/api/get/3406732?partner_username=facebook&partner_apikey=apikey4facebook");'></div>
 <?php include_once("includes/nav.php");?>
 
 
@@ -24,8 +24,9 @@
     <div class="headerTextWrapper">
         <div class = "blurryHeaderWrapper"></div>
         <!-- TODO: Make this pull the event's featured image -->
-        <div class = "blurryHeader" style = "background-image:url('img/examples/imageOne.jpg');"></div>
-        <h1 class = "headerText">Elk Appreciation Party</h1>
+        <div class = "blurryHeader" style = "background-image:url('http://flashfotoapi.com/api/get/3406732?partner_username=facebook&partner_apikey=apikey4facebook');"></div>
+        <h1 class = "headerText">Palm Trees & Chickens</h1>
+        <div class = "descriptionBox headerDescription">An event dedicated to subjecting developers to my vacation photos. Enter to win absolutely nothing.</div>
     </div>
 
 
@@ -33,34 +34,32 @@
 
     <div id =  "wrap" style = "margin:0 1px;">
 
-        <div class = "descriptionBox">
-            A gathering to celebrate the majesty of Elk everywhere. Upload your best "Elkie" for a chance to win Elk-related prizes.
-        </div>
+
 
         <ul class = "dropdownContainer">
             <!-- TODO: These buttons should reflect the current selection (default is shown) with additional selection options shown in the submenu. -->
-            <li><button class = "ghost miniGhost ghostDropdown" onclick = "$(this).next('.ghostSubMenu').toggle();">All Photos</button>
-                <ul class = "ghostSubMenu">
+            <li><button class = "glassy glassyDropdown" onclick = "$(this).next('.glassySubMenu').toggle();">All Photos</button>
+                <ul class = "glassy glassySubMenu">
                     <!-- TODO: Clicking this li will refresh the page and display only the user's photos. -->
                     <li>My Photos</li>
                 </ul>
             </li>
-            <li><button class = "ghost miniGhost ghostDropdown" onclick = "$(this).next('.ghostSubMenu').toggle();">Most Popular</button>
-                <ul class = "ghostSubMenu">
+            <li><button class = "glassy glassyDropdown" onclick = "$(this).next('.glassySubMenu').toggle();">Most Popular</button>
+                <ul class = "glassy glassySubMenu">
                     <!-- TODO: Clicking this li will refresh the page and display the photos chronologically. -->
                     <li>Most Recent</li>
                 </ul>
             </li>
             <!-- TODO: Only display this for admins or managers of this event. -->
-            <li><button class = "ghost miniGhost ghostDropdown" onclick = "$(this).next('.ghostSubMenu').toggle();">Manager Mode</button>
-                <ul class = "ghostSubMenu">
+            <li><button class = "glassy glassyDropdown" onclick = "$(this).next('.glassySubMenu').toggle();">Manager Mode</button>
+                <ul class = "glassy glassySubMenu">
                     <!-- TODO: Clicking "On" will give all photos the "approved" class and change their card click function to toggle approved/rejected. -->
                     <li>On</li>
                     <li>Off</li>
                 </ul>
             </li>
             <!-- TODO: Only display this submit button when Managing Mode is turned on. -->
-            <li><button class = "ghost miniGhost">Submit</button></li>
+            <li><button class = "glassy">Submit</button></li>
         </ul>
 
         <!-- TODO: This whole enitre thing should be clickable and will open the image in the gallery viewer. -->

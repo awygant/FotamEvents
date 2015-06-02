@@ -19,7 +19,7 @@
             <div class = "row">
                 <div class = "col-sm-5 col-xs-12">
                     <!-- TODO: This button requests user's location and redirects to events.php -->
-                    <button class = "ghost large">Use My Location</button>
+                    <button class = "glassy large">Use My Location</button>
                 </div>
                 <div class = "col-sm-2 col-xs-12">
                     <div class = "separator">
@@ -28,11 +28,11 @@
                 </div>
                 <div class = "col-sm-5 col-xs-12">
                     <!-- TODO: This form takes user input and redirects to events.php -->
-                    <input type = "text" class = "ghost large" placeholder = "TYPE IN SEARCH"/>
+                    <input type = "text" class = "glassy large text-center" placeholder = "Type in search"/>
                 </div>
             </div>
-            <p class = "uppercase boldItalic large">Search events, addresses, brands, or categories.</p>
-            <p class = "uppercase boldItalic large">Hit enter to continue.</p>
+            <p class = "large">Search events, addresses, brands, or categories.</p>
+            <p class = "large">Hit enter to continue.</p>
         </div>
 
     <?php include_once "includes/footer.php"; ?>

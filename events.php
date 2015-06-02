@@ -15,6 +15,17 @@
         <h1 class = "headerText">Events Near Here</h1>
     </div>
     <div id = "wrap" class = "container">
+        <ul class = "dropdownContainer">
+            <!-- TODO: These buttons should reflect the current selection (default is shown) with additional selection options shown in the submenu. -->
+            <li><button class = "glassy glassyDropdown" onclick = "$(this).next('.glassySubMenu').toggle();">Current Events</button>
+                <ul class = "glassy glassySubMenu">
+                    <!-- TODO: Clicking this li will refresh the page and display events that haven't started yet. -->
+                    <li>Upcoming Events</li>
+                    <!-- TODO: Clicking this li will refresh the page and display events that have ended. -->
+                    <li>Past Events</li>
+                </ul>
+            </li>
+        </ul>
         <ul class = "searchResults row">
             <!-- TODO: add onclick events to each list item. -->
             <li class = "col-lg-3 col-sm-6 col-xs-12">

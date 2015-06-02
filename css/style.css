@@ -206,22 +206,6 @@ body{
     transition: opacity 0.5s;
 }
 
-.ghost{
-    font-family: 'Amaranth', sans-serif;
-    color: #28221f;
-    border: 4px solid #28221f;
-    padding:15px;
-    text-align:center;
-    text-transform:uppercase;
-    background-color:rgba(0,0,0,0);
-    width:100%;
-    min-height:78px;
-}
-
-.miniGhost{
-    min-height:56px;
-}
-
 .separator{
     padding:34px 0;
     display:inline-block;
@@ -325,8 +309,8 @@ ul.searchResults>li{
 
 .uploadButton{
     line-height:500px;
-    background-image:url("../img/icons/camera.png");
-    background-image:url("../img/icons/camera.svg");
+    background-image:url("../img/icons/shutter.png");
+    background-image:url("../img/icons/shutter.svg");
     background-repeat:no-repeat;
     background-size:150px auto;
     background-position:center center;
@@ -636,9 +620,6 @@ ul.searchResults>li{
 }
 
 @media(max-width:992px){
-    .headerTextWrapper{
-        height:200px;
-    }
     .headerText{
      font-size:2.5em;
     }
@@ -651,20 +632,26 @@ ul.searchResults>li{
 
 .headerTextWrapper{
     position:relative;
-    min-height:200px;
     margin-bottom:1px;
-    overflow:visible;
+    overflow:hidden;
 }
 
 .headerText{
     font-family: 'Amaranth', sans-serif;
     font-size:5em;
     color:#28221f;
-    position:absolute;
+    position:relative;
     width:100%;
     text-align:center;
-    padding:50px 15px 0 15px;
+    padding:66px 15px 25px 15px;
     z-index:1;
+    margin:0;
+}
+
+.headerDescription{
+    position:relative;
+    z-index:1;
+    margin-bottom:0 !important;
 }
 
 #menuButton{
@@ -672,7 +659,6 @@ ul.searchResults>li{
     height:40px;
     border-radius:20px;
     background-image:url("../img/icons/plus.png");
-    /*** This file changed - make sure to grab the updated .svg **/
     background-image:url("../img/icons/plus.svg");
     background-size:auto 90%;
     background-repeat:no-repeat;
@@ -758,13 +744,6 @@ ul.searchResults>li{
     margin:2px auto;
 }
 
-/** Add these classes **/
-
-.ghost:active{
-    background-color:rgba(0,0,0,0.2);
-}
-
-
 .fixedUploadButton{
     position:fixed;
     right:75px;
@@ -815,7 +794,7 @@ ul.searchResults>li{
     padding:1px;
 }
 
-.ghostDropdown{
+.glassyDropdown{
     background-image:url("../img/elements/carrot.png");
     background-image:url("../img/elements/carrot.svg");
     background-position: right 10px center;
@@ -823,7 +802,6 @@ ul.searchResults>li{
     background-repeat:no-repeat;
     padding-right:30px;
 }
-
 
 /* **/
 ul.dropdownContainer{
@@ -840,30 +818,25 @@ ul.dropdownContainer>li{
     margin-bottom:4px;
 }
 
-ul.ghostSubMenu{
+ul.glassySubMenu{
     list-style-type:none;
     display:none;
     padding:0;
     position:absolute;
-    z-index:1;
+    z-index:2;
     width:100%;
 }
 
-ul.ghostSubMenu>li{
+ul.glassySubMenu>li{
     padding:15px;
     font-family:'Amaranth', sans-serif;
-    text-transform:uppercase;
-    color:#999;
-    background-color:#28221f;
+    background-color:rgba(255,255,255,0.8);
     cursor:pointer;
+    font-size:14pt;
 }
 
-ul.ghostSubMenu>li:hover{
-    background-color:#333;
-}
-
-ul.ghostSubMenu>li:active{
-    background-color:#555;
+ul.glassySubMenu>li:hover{
+    background-color:rgba(255,255,255,1);
 }
 
 .card{
@@ -933,6 +906,19 @@ ul.ghostSubMenu>li:active{
     border:1px solid rgba(30,30,30,0.2);
     border-top-color:rgba(255,255,255,0.2);
     border-bottom-color:rgba(30,30,30,0.3);
+}
+
+button.glassy, input[type=text].glassy{
+    font-size:16pt;
+    min-height:56px;
+    font-family:'Amaranth', sans-serif;
+    color:#28221f;
+    padding:15px;
+    width:100%;
+}
+
+button.glassy:active{
+    background-color:rgba(255,255,255,0.6);
 }
 
 .blurry{
