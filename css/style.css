@@ -621,7 +621,7 @@ ul.searchResults>li{
 
 @media(max-width:992px){
     .headerText{
-     font-size:2.5em;
+        font-size:2.5em;
     }
 }
 
@@ -974,6 +974,24 @@ button.glassy:active{
     transform:rotate(-90deg);
 }
 
+.carrot{
+    background-image:url("../img/elements/carrot.png");
+    background-image:url("../img/elements/carrot.svg");
+    background-size:cover;
+    width:10px;
+    height:10px;
+    display:inline-block;
+    margin:auto 10px;
+}
+
+.carrot-left{
+    transform:rotate(90deg);
+}
+
+.carrot-right{
+    transform:rotate(-90deg);
+}
+
 
 @media(min-width:769px){
     .vertical-center{
@@ -1007,42 +1025,40 @@ button.glassy:active{
     }
 }
 
-/** Maybe? **/
+
 .large-card{
     max-width:85%;
-    width:auto;
+    width:1200px;
 }
-
 
 .large-card .userProfilePic{
     position:relative;
     bottom:auto;
     left:auto;
+    transition:transform 0.5s;
 }
 
-.fauxCard{
-    position:absolute;
-    width:10%;
-}
-
-.fauxCardPrevious{
-    margin-left:-3%;
-    left:0;
-}
-
-.fauxCardNext{
-    margin-right:-3%;
-    right:0;
-}
-
-.fauxCard img{
-    height:400px;
+.large-card-blurry{
     max-width:none;
+    min-width:300px;
 }
 
-.fauxCard .descriptionBox{
-    height:500px;
-    padding:0;
-    padding-bottom:100px;
+.large-card-blurry img{
+    width:100%;
+}
+
+.blurryWrapper{
     overflow:hidden;
+}
+
+button.photoNav{
+    display:inline-block;
+    width:auto;
+    vertical-align: top;
+}
+
+@media(max-width:900px){
+    button.photoNav{
+        display:none;
+    }
 }
