@@ -17,7 +17,9 @@
 
             carousel.owlCarousel({
                 singleItem: true,
-                afterMove: navigate
+                afterMove: navigate,
+                pagination: false,
+                slideSpeed: 300
             });
 
             owl = carousel.data('owlCarousel');

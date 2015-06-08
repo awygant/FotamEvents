@@ -607,7 +607,6 @@ ul.searchResults>li{
         display: block;
         height: 1px;
         content: " ";
-        /*width: 28%;*/
         position: absolute;
         left: 15px;
         right:60%;
@@ -624,11 +623,6 @@ ul.searchResults>li{
         font-size:2.5em;
     }
 }
-
-
-/***** NEXT LEVEL SHIT *****/
-
-/** Change these classes **/
 
 .headerTextWrapper{
     position:relative;
@@ -731,7 +725,6 @@ ul.searchResults>li{
     .headerText{
         font-size:2.5em;
     }
-    /** Add this rule **/
     .mainPhoto{
         background-color: rgba(255, 255, 255, 0.2);
         text-align:center;
@@ -803,7 +796,6 @@ ul.searchResults>li{
     padding-right:30px;
 }
 
-/* **/
 ul.dropdownContainer{
     margin-bottom:2px;
     list-style-type:none;
