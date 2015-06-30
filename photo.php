@@ -40,6 +40,12 @@
                     // Navigate to the right
                 }
             }
+
+            $('.collapsingHeader').click(function(){
+                $(this).toggleClass('heightAuto');
+                $(this).children('h1').toggleClass('truncate');
+            });
+
         })
     </script>
 
@@ -49,16 +55,22 @@
 <div class = "mainBackground" style = 'background-image:url("img/elements/white-40.png"), url("http://flashfotoapi.com/api/get/3406732?partner_username=facebook&partner_apikey=apikey4facebook");'></div>
 <?php include_once("includes/nav.php");?>
 
+
 <div id = "container">
 
-    <div class="headerTextWrapper">
+    <!--div class="headerTextWrapper">
         <div class = "blurryHeaderWrapper"></div>
-        <!-- TODO: Make this pull the event's featured image -->
         <div class = "blurryHeader" style = "background-image:url('http://flashfotoapi.com/api/get/3406732?partner_username=facebook&partner_apikey=apikey4facebook');"></div>
         <h1 class = "headerText">Palm Trees & Chickens</h1>
         <div class = "descriptionBox headerDescription">An event dedicated to subjecting developers to my vacation photos. Enter to win absolutely nothing.</div>
-    </div>
+    </div-->
 
+    <!-- TODO: Indicate that clicking this thing expands it -->
+    <!-- TODO: Implement blurry header style -->
+    <div class = "collapsingHeader">
+        <h1 class = "truncate bold">Palm Trees & Chickens Chickens Chickens</h1>
+        <p>An event dedicated to subjecting developers to my vacation photos. Enter to win absolutely nothing.</p>
+    </div>
 
 
 
