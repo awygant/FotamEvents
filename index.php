@@ -28,6 +28,19 @@
         <div class = "descriptionBox headerDescription">An event dedicated to subjecting developers to my vacation photos. Enter to win absolutely nothing.</div>
     </div>
 
+    <!-- TODO: Make a click on .infoBoxWrapper close .infoBoxWrapper -->
+    <div class = "infoBoxWrapper">
+        <div class = "glassy infoBox vertical-center" style = "pointer-events:none">
+            <div class = "fotamInfoHeader"></div>
+            <p>To upload a photo, you must first login with your Fotam account.</p>
+            <div class = "row">
+                <!-- TODO: Link to login -->
+                <div class = "col-xs-12 col-sm-6"><p><button class = "glassy">Login</button></p></div>
+                <!-- TODO: Make this cancel button close .infoBoxWrapper -->
+                <div class = "col-xs-12 col-sm-6"><button class = "warning glassy">Cancel</button></div>
+            </div>
+        </div>
+    </div>
 
     <div id = "wrap" class = "container text-center">
 
