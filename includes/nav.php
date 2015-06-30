@@ -1,6 +1,17 @@
 <!-- TODO: Make fixedUploadButton bring up the photo dialogue. Should only be present when user is checked in. -->
-<div class = "fixedUploadButton glassy">UPLOAD</div>
-<div id = "menuButton" class = "glassy"></div>
+<div class="fixedUploadButton">UPLOAD</div>
+<div class="galleryIcon">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</div>
+<div id="menuButton"></div>
 <div id = "blinkingArrowContainer">
     <div class = "blinkingArrow"></div>
     <div class = "blinkingArrow"></div>
